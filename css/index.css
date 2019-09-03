@@ -1,0 +1,130 @@
+:root,body{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items:space-between;
+    align-content:space-between;
+}
+
+.main_container .img_box{
+    width: 33.3vw;
+    height: 20vh;
+    overflow:hidden;
+    position: relative;
+}
+
+.main_container .img_box .mask_box{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:1;
+    border-radius:0.1rem;
+    box-shadow:inset 0 0 0.4rem #1ff,inset 0 0 0.8rem #009988,inset 0 0 0.12rem #20A1E0;
+}
+
+.main_container .img_box img{
+    width:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translatex(-50%) translatey(-50%);
+    border-radius:0.1rem;
+}
+
+.start_btn{
+    position: fixed;
+    z-index:1;
+    left: 50%;
+    top: 50%;
+    transform:translatex(-50%) translatey(-50%);
+    animation:scale 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes scale{
+    0%{
+        opacity: .6;
+        transform:translatex(-50%) translatey(-50%) scale(0.9);
+    }
+    50%{
+        opacity: 1;
+        transform:translatex(-50%) translatey(-50%) scale(1);
+    }
+    100%{
+        opacity: .6;
+        transform:translatex(-50%) translatey(-50%) scale(0.9);
+    }
+}
+
+.result_mask{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(122,122,122,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+.result_mask .main{
+    width: 5.6rem;
+    position: absolute;
+    left:0;
+    top:25%;
+    right:0;
+    margin:auto;
+    border-radius:0.1rem;
+    animation:move 1.2s ease-in-out;
+}
+.result_mask .main #prize_text{
+    letter-spacing: 0.12rem;
+    font-size: 0.52rem;
+    font-weight: bold;
+    text-align:center;
+    color: #F40;
+    margin-bottom: 0.3rem;
+}
+.result_mask .main #prize_img{
+    width: 100%;
+    margin-bottom: 0.3rem;
+} 
+.result_mask .main #btn{
+    letter-spacing: 0.03rem;
+    font-size: 0.1rem;
+    color: #000;
+    height: 0.8rem;
+    font-size: 0.32rem;
+    font-weight: bold;
+    color: #fff;
+    margin:0 auto;
+    border-radius:0.8rem;
+    background-color: #20A1E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes move{
+    from{
+        transform-origin:center center center;
+        opacity:0.5;
+        transform:scale(0) rotate(0deg);
+    }
+    to{
+        transform-origin:center center center;
+        opacity:1;
+        transform:scale(1) rotate(360deg);
+    }
+}
