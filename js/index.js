@@ -14,26 +14,26 @@
     const range = [
         {
             from:0,
-            to:0,//1%
-            text:'一等奖',
-            image:'',
-        },
-        {
-            from:1,
             to:2,//2%
-            text:'二等奖',
+            text:'一等奖',
             image:'',
         },
         {
             from:3,
             to:5,//3%
+            text:'二等奖',
+            image:'',
+        },
+        {
+            from:6,
+            to:10,//5%
             text:'三等奖',
             image:'',
         },
         { 
-            from:6,
+            from:11,
             to:100,
-            text:'噢，没中奖',
+            text:'没中奖！！！',
             image:'',
         },
     ];
