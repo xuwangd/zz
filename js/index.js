@@ -14,24 +14,24 @@
     const range = [
         {
             from:0,
-            to:0,//0%
+            to:1,//0%
             text:'一等奖',
             image:'',
         },
         {
-            from:1,
-            to:1,//1%
+            from:2,
+            to:4,//1%
             text:'二等奖',
             image:'',
         },
         {
-            from:2,
-            to:2,//1%
+            from:5,
+            to:8,//1%
             text:'三等奖',
             image:'',
         },
         { 
-            from:3,
+            from:9,
             to:100,
             text:'没中奖！！！',
             image:'',
