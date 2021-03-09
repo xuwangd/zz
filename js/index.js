@@ -10,7 +10,7 @@
     const result_mask = document.getElementsByClassName('result_mask')[0];
     const btn = document.getElementById('btn');
     let index = Math.floor( Math.random()*len );
-    let resultIndex;
+    let resultIndex
     const range = [
         {
             from:0,
@@ -19,21 +19,21 @@
             image:'',
         },
         {
-            from:2,
-            to:4,//1%
+            from:3,
+            to:6,//1%
             text:'二等奖',
             image:'',
         },
         {
-            from:5,
-            to:8,//1%
+            from:7,
+            to:14,//1%
             text:'三等奖',
             image:'',
         },
         { 
-            from:9,
+            from:15,
             to:100,
-            text:'没中奖！！！',
+            text:'好好学习天天向上',
             image:'',
         },
     ];
@@ -47,15 +47,16 @@
     }
 
 
-    function result() { 
-        resultIndex = Math.floor( Math.random()*101 );
-        range.some((item, key)=>{
-            if( item.from <= resultIndex && resultIndex <= item.to ){
-                resultIndex = key;
-                return true;
-            }
+    function result(min,max) {
+        resultIndex = Number.parseInt( Math.random()*(max - min) + min );
+        resultItem = range.find((item,key)=>{
+          if( item.from <= resultIndex && resultIndex <= item.to ){
+              return true;
+          }
+          return false;
         })
-        prize_text.innerText = range[resultIndex].text;
+        const { text } = resultItem || {}
+        prize_text.innerText = text;
         prize_img.src = img_box[index].getElementsByTagName('img')[0].src;
         result_mask.style.display = 'block';
     }
@@ -68,7 +69,7 @@
         }, 200)
 
         timmer_02 = setTimeout(()=>{
-            result()
+            result(0,100)
             clearInterval(timmer_01)
             clearInterval(timmer_02)
         }, 3000)
