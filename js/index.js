@@ -72,7 +72,7 @@
             result(0,100)
             clearInterval(timmer_01)
             clearInterval(timmer_02)
-        }, 3000)
+        }, 1000)
     }
 
     start_btn.onclick = function () {
