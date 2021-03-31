@@ -19,19 +19,19 @@
             image:'',
         },
         {
-            from:3,
-            to:6,//1%
+            from:2,
+            to:4,//1%
             text:'二等奖',
             image:'',
         },
         {
-            from:7,
-            to:14,//1%
+            from:5,
+            to:8,//1%
             text:'三等奖',
             image:'',
         },
         { 
-            from:15,
+            from:9,
             to:100,
             text:'好好学习天天向上',
             image:'',
